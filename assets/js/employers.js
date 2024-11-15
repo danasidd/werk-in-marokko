@@ -12,11 +12,11 @@ $(document).ready(function(){
     $(function() {
         $('#contactForm').validate({
             rules: {
-                name: {
+                title: {
                     required: true,
                     minlength: 2
                 },
-                subject: {
+                company: {
                     required: true,
                     minlength: 4
                 },
@@ -28,18 +28,27 @@ $(document).ready(function(){
                     required: true,
                     email: true
                 },
-                message: {
+                description: {
                     required: true,
                     minlength: 20
-                }
+                },
+                location: {
+                    required: false,
+                },
+                website: {
+                    required: false,
+                },
+                socials: {
+                    required: false,
+                },
             },
             messages: {
-                name: {
-                    required: "Please enter your name.",
+                title: {
+                    required: "Please enter your job title.",
                     minlength: "your name must consist of at least 2 characters"
                 },
-                subject: {
-                    required: "Please enter subject.",
+                company: {
+                    required: "Please enter company name.",
                     minlength: "your subject must consist of at least 4 characters"
                 },
                 number: {
@@ -49,8 +58,8 @@ $(document).ready(function(){
                 email: {
                     required: "Please enter valid email."
                 },
-                message: {
-                    required: "Please enter a message.",
+                description: {
+                    required: "Please enter a job description.",
                 }
             },
             submitHandler: function(form) {

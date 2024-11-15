@@ -1,3 +1,5 @@
+import * as mobiscroll from '@mobiscroll/javascript';
+
 $(document).ready(function(){
     
     (function($) {
@@ -38,10 +40,6 @@ $(document).ready(function(){
                     required: "Please enter your name.",
                     minlength: "your name must consist of at least 2 characters"
                 },
-                subject: {
-                    required: "Please enter subject.",
-                    minlength: "your subject must consist of at least 4 characters"
-                },
                 number: {
                     required: "Please enter a valid phone number.",
                     minlength: "your number must consist of at least 5 characters"
@@ -49,9 +47,15 @@ $(document).ready(function(){
                 email: {
                     required: "Please enter valid email."
                 },
-                message: {
-                    required: "Please enter a message.",
-                }
+                cover: {
+                    required: "Please enter a cover letter.",
+                },
+                country: {
+                    required: "Please enter country."
+                },
+                cv: {
+                    required: "Please upload CV."
+                },
             },
             submitHandler: function(form) {
                 $(form).ajaxSubmit({
